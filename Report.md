@@ -54,9 +54,9 @@ Adam optimizer was used for learning.
 
 ### Plot of Rewards
 
-![RewardsPlot](results1.png) 
+![RewardsPlot](results2.png) 
 
-The environment was solved in 98 episodes
+The environment was solved in 105 episodes
 
 ### Ideas for Future Work
 Although I didn't find this particularly in the literature, I would assume that both prioritized replay and  error clipping should bring better results, because they are used in DQN.
