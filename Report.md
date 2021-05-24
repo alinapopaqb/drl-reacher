@@ -54,7 +54,7 @@ Adam optimizer was used for learning.
 
 ### Plot of Rewards
 
-![RewardsPlot](results.png) 
+![RewardsPlot](results1.png) 
 
 The environment was solved in 98 episodes
 
