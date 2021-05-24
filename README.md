@@ -91,9 +91,13 @@ The environment is considered solved, when the average (over 100 episodes) of th
      `pip install -r requirements.txt`
 
 4. Download the environment from one of the links below.  You need only to select the environment that matches your operating system:
+       
         - Linux: [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P2/Reacher/Reacher_Linux.zip)
+       
         - Mac OSX: [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P2/Reacher/Reacher.app.zip)
+       
         - Windows (32-bit): [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P2/Reacher/Reacher_Windows_x86.zip)
+       
         - Windows (64-bit): [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P2/Reacher/Reacher_Windows_x86_64.zip)
    
 5. Place the file in the `continuous_control/` folder, and unzip (or decompress) the file. 

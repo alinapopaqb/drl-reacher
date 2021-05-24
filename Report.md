@@ -38,9 +38,9 @@ We use this to train the local critic.
 #### Hyperparameters
 
 We have the following hyperparameters we need to work with:
-* Replay buffer size, `BUFFER_SIZE` represent the "Memory" we want our agent to have. Ideally we would like as much memory as we can get, in the current application we have 1e5. 
+* Replay buffer size, `BUFFER_SIZE` represents the "Memory" we want our agent to have. Ideally we would like as much memory as we can get, in the current application we have 1e5. 
 * Learning mini batch size, `BATCH_SIZE` is the amount of samples we will extract from "Memory" in order to learn based on. In my case it is 128. Batch size is recommended a power of 2 number.
-* The discount factor, `GAMMA` is mainly the discount that we apply on the next state and its best action pair value, the estimated max Q by target critic. We could play with this factor in order to balance the long and short term agent objectives. 0.9 gave better results than 0.99, so the former was chosen.
+* The discount factor, `GAMMA` is mainly the discount that we apply on the next state and its best action pair value, the estimated max Q by target critic. We could play with this factor in order to balance the long and short term agent objectives. 0.9 gave better results than 0.99 (98 vs 120 episodes to solve the env), so the former was chosen.
 * The update rate, `TAU`, one should think about this as a learning rate for weights from local network to target network. 0.001 as TAU was chosen. A higher tau gives worse results.
 * The learning rate, `LR`, represents the learning rate of the networks. The actual LR is 0.001. A smaller LR is leading to slightly worse results. A regularisation term L2 was also tried, but the learning was significantly slower, so that I left the default value = 0.
 * Although I understand that the ONU noise is a way to include some exploration into the algorithm, I wanted to see what would be the baseline without the noise. The results are good, so I decided to have the simplest version that does the job.
@@ -56,7 +56,7 @@ Adam optimizer was used for learning.
 
 ![RewardsPlot](results.png) 
 
-The environment was solved in 513 episodes
+The environment was solved in 98 episodes
 
 ### Ideas for Future Work
 Although I didn't find this particularly in the literature, I would assume that both prioritized replay and  error clipping should bring better results, because they are used in DQN.
